@@ -10,7 +10,7 @@ public class SingletonData {
 	
 	private SingletonData() {}
 	
-	public static List<Student> getStudent(){
+	public static List<Student> getStudents(){
 		
 		if(students==null) {
 			students=new ArrayList<Student>();

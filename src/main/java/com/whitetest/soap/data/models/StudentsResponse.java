@@ -27,7 +27,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="exams" type="{com/whitetest/soap/data/models}Exam" maxOccurs="unbounded"/>
+ *         &lt;element name="students" type="{com/whitetest/soap/data/models}Student" maxOccurs="unbounded"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -38,45 +38,45 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "exams"
+    "students"
 })
-@XmlRootElement(name = "ExamsResponse")
-public class ExamsResponse {
+@XmlRootElement(name = "StudentsResponse")
+public class StudentsResponse {
 
     @XmlElement(required = true)
-    protected List<Exam> exams;
+    protected List<Student> students;
 
     /**
-     * Gets the value of the exams property.
+     * Gets the value of the students property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the exams property.
+     * This is why there is not a <CODE>set</CODE> method for the students property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getExams().add(newItem);
+     *    getStudents().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Exam }
+     * {@link Student }
      * 
      * 
      */
-    public List<Exam> getExams() {
-        if (exams == null) {
-            exams = new ArrayList<Exam>();
+    public List<Student> getStudents() {
+        if (students == null) {
+            students = new ArrayList<Student>();
         }
-        return this.exams;
+        return this.students;
     }
 
-	public void setExams(List<Exam> exams) {
-		this.exams = exams;
+	public void setStudents(List<Student> students) {
+		this.students = students;
 	}
 
 }

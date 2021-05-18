@@ -37,6 +37,21 @@ targetNamespace="com/whitetest/soap/data/models" elementFormDefault="qualified">
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
+      <xsd:element name="StudentsRequest">
+         <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="students" type="xsd:string" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    
+       <xsd:element name="StudentsResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="students" type="tns:Student" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
  
     <xsd:complexType name="Student">
         <xsd:sequence>

@@ -8,8 +8,6 @@
 
 package com.whitetest.soap.data.models;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -27,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="exams" type="{com/whitetest/soap/data/models}Exam" maxOccurs="unbounded"/>
+ *         &lt;element name="students" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -38,45 +36,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "exams"
+    "students"
 })
-@XmlRootElement(name = "ExamsResponse")
-public class ExamsResponse {
+@XmlRootElement(name = "StudentsRequest")
+public class StudentsRequest {
 
     @XmlElement(required = true)
-    protected List<Exam> exams;
+    protected String students;
 
     /**
-     * Gets the value of the exams property.
+     * Gets the value of the students property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the exams property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getExams().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link Exam }
-     * 
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public List<Exam> getExams() {
-        if (exams == null) {
-            exams = new ArrayList<Exam>();
-        }
-        return this.exams;
+    public String getStudents() {
+        return students;
     }
 
-	public void setExams(List<Exam> exams) {
-		this.exams = exams;
-	}
+    /**
+     * Sets the value of the students property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setStudents(String value) {
+        this.students = value;
+    }
 
 }

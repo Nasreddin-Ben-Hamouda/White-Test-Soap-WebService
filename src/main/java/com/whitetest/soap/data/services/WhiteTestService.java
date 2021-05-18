@@ -24,7 +24,7 @@ public class WhiteTestService {
 	public WhiteTestResponse checkWhiteTest(StudentRequest studentRequest) throws DatatypeConfigurationException {
 		
 		WhiteTestResponse whiteTestResponse=new WhiteTestResponse();
-		List<Student> students=SingletonData.getStudent();
+		List<Student> students=SingletonData.getStudents();
 		List<Exam> exams=SingletonData.getExams();
 		Optional<Student> student=students.stream()
 				 				.filter((std) -> std.getId()==studentRequest.getStudentId())
